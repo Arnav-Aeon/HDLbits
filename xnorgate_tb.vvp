@@ -1,0 +1,105 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001c74340b230 .scope module, "xnorgate_tb" "xnorgate_tb" 2 4;
+ .timescale -9 -9;
+v000001c74340bb50_0 .var "a", 0 0;
+v000001c74340bbf0_0 .var "b", 0 0;
+v000001c74340bc90_0 .net "out", 0 0, L_000001c743322b80;  1 drivers
+S_000001c743325140 .scope module, "xnor1" "xnor_gate" 2 8, 3 1 0, S_000001c74340b230;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "out";
+v000001c7432f3000_0 .net *"_ivl_1", 0 0, L_000001c74340bd30;  1 drivers
+v000001c7432f2b60_0 .net *"_ivl_3", 0 0, L_000001c74340bdd0;  1 drivers
+v000001c7433252d0_0 .net *"_ivl_5", 0 0, L_000001c74340be70;  1 drivers
+v000001c743325370_0 .net *"_ivl_7", 0 0, L_000001c743323080;  1 drivers
+v000001c743325410_0 .net *"_ivl_8", 0 0, L_000001c743322ae0;  1 drivers
+v000001c7433254b0_0 .net "a", 0 0, v000001c74340bb50_0;  1 drivers
+v000001c74340ba10_0 .net "b", 0 0, v000001c74340bbf0_0;  1 drivers
+v000001c74340bab0_0 .net "out", 0 0, L_000001c743322b80;  alias, 1 drivers
+L_000001c74340bd30 .reduce/nor v000001c74340bb50_0;
+L_000001c74340bdd0 .arith/mult 1, L_000001c74340bd30, v000001c74340bbf0_0;
+L_000001c74340be70 .reduce/nor v000001c74340bbf0_0;
+L_000001c743323080 .arith/mult 1, L_000001c74340be70, v000001c74340bb50_0;
+L_000001c743322ae0 .arith/sum 1, L_000001c74340bdd0, L_000001c743323080;
+L_000001c743322b80 .reduce/nor L_000001c743322ae0;
+    .scope S_000001c74340b230;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "xnorgate_tb.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001c74340b230 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001c74340bbf0_0, 0, 1;
+    %delay 20, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "xnorgate_tb.v";
+    "./xnorgate.v";

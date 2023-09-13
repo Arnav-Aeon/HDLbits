@@ -1,0 +1,23 @@
+$date
+	Wed Sep 13 03:19:41 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module always1_tb $end
+$var wire 1 ! out1 $end
+$scope module top $end
+$var wire 1 ! one $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1!
+$end
